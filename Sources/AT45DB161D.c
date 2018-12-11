@@ -54,11 +54,15 @@ uint8_t AT45_ReadByte(void)
 
 uint8_t AT45_ReadStatus(void)
 {
+    uint8_t data;
     AT_CS_ASSERT
     AT45_Writebyte(AT_STATUS_REG_READ);
-    at45_status_reg = AT45_ReadByte();
+    data = AT45_ReadByte();
     AT_CS_DEASSERT
-    return (at45_status_reg);
+    #if (AT45_TEST)
+    at45_status_reg = data;
+    #endif
+    return (data);
 }
 
 uint8_t AT45_IsBusy(void)
