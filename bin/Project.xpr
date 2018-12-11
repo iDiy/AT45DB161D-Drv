@@ -1,0 +1,4 @@
+Data:1 < ADDXPR ONLY_ADD_IF_NEW "at45_status_reg"
+Data:1 < ADDXPR ONLY_ADD_IF_NEW "test_buf1"
+Data:1 < ADDXPR ONLY_ADD_IF_NEW "test_buf2"
+Data:1 < ADDXPR ONLY_ADD_IF_NEW "test_buf3"
