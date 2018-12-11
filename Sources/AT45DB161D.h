@@ -18,5 +18,8 @@ void AT45_init(void);
 uint8_t AT45_IsBusy(void);
 void AT45_ReadFlash(uint16_t page, uint16_t offset, uint16_t sizes, uint8_t *out);
 void AT45_ReadBuffer1(uint16_t offset, uint16_t sizes, uint8_t *buf);
+void AT45_WriteBuffer1(uint16_t offset, uint16_t sizes, uint8_t *buf);
+void AT45_Buffer1ToPage(uint16_t page);
+void AT45_PageToBuffer1(uint16_t page);
 
 #endif /* AT45DB161D_H */

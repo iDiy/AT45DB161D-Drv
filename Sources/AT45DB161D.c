@@ -149,6 +149,7 @@ void AT45_PageToBuffer1(uint16_t page)
 
 void AT45_Test(void)
 {
+    #if (AT45_TEST)
     int i;
     while (AT45_IsBusy());
     for (i = 0; i < AT_PAGE_SIZE; i++)
@@ -160,4 +161,5 @@ void AT45_Test(void)
     AT45_PageToBuffer1(0);
     AT45_ReadBuffer1(0, AT_PAGE_SIZE, test_buf2);
     AT45_ReadFlash(0, 0, AT_PAGE_SIZE, test_buf3);
+    #endif
 }
